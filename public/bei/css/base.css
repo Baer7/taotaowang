@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mui-bar h1 {
+  font-weight: 700;
+}
+.mui-bar a {
+  font-weight: 600;
+}

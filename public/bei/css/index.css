@@ -1,0 +1,211 @@
+.nav_links {
+  padding: 10px;
+}
+.nav_links ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav_links ul li {
+  width: 33.33%;
+}
+.nav_links ul li a {
+  width: 100%;
+}
+.nav_links ul li a img {
+  width: 100%;
+  display: block;
+}
+.brand {
+  padding: 0 10px;
+}
+.brand img {
+  width: 100%;
+}
+.brand ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+.brand ul li {
+  width: 25%;
+}
+.add {
+  padding: 0 10px;
+}
+.add img {
+  width: 100%;
+}
+.add ul {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.add ul li {
+  width: 50%;
+  padding: 5px;
+}
+.add ul li a {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  box-shadow: 0 0 5px #ccc;
+  text-align: center;
+}
+.add ul li a img {
+  width: 100%;
+}
+.add ul li a span {
+  display: inline-block;
+  font-size: 14px;
+  color: #8f8f94;
+  text-align: center;
+  padding: 5px;
+}
+.add ul li a p {
+  text-align: center;
+  line-height: 5px;
+}
+.add ul li a p span:nth-child(1) {
+  color: red;
+}
+.add ul li a p span:nth-child(2) {
+  text-decoration: line-through;
+}
+.add ul li a button {
+  margin-bottom: 5px;
+}
+.product {
+  padding: 0 10px;
+}
+.product img {
+  width: 100%;
+}
+.product ul {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.product ul li {
+  width: 50%;
+  padding: 5px;
+}
+.product ul li a {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  box-shadow: 0 0 5px #ccc;
+  text-align: center;
+}
+.product ul li a img {
+  width: 100%;
+}
+.product ul li a span {
+  display: inline-block;
+  font-size: 14px;
+  color: #8f8f94;
+  text-align: center;
+  padding: 5px;
+}
+.product ul li a p {
+  text-align: center;
+  line-height: 5px;
+}
+.product ul li a p span:nth-child(1) {
+  color: red;
+}
+.product ul li a p span:nth-child(2) {
+  text-decoration: line-through;
+}
+.product ul li a button {
+  margin-bottom: 5px;
+}
+.she {
+  padding: 0 10px;
+}
+.she img {
+  width: 100%;
+}
+.she ul {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.she ul li {
+  width: 50%;
+  padding: 5px;
+}
+.she ul li a {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  box-shadow: 0 0 5px #ccc;
+  text-align: center;
+}
+.she ul li a img {
+  width: 100%;
+}
+.she ul li a span {
+  display: inline-block;
+  font-size: 14px;
+  color: #8f8f94;
+  text-align: center;
+  padding: 5px;
+}
+.she ul li a p {
+  text-align: center;
+  line-height: 5px;
+}
+.she ul li a p span:nth-child(1) {
+  color: red;
+}
+.she ul li a p span:nth-child(2) {
+  text-decoration: line-through;
+}
+.she ul li a button {
+  margin-bottom: 5px;
+}
+.boy {
+  padding: 0 10px;
+}
+.boy img {
+  width: 100%;
+}
+.boy ul {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.boy ul li {
+  width: 50%;
+  padding: 5px;
+}
+.boy ul li a {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  box-shadow: 0 0 5px #ccc;
+  text-align: center;
+}
+.boy ul li a img {
+  width: 100%;
+}
+.boy ul li a span {
+  display: inline-block;
+  font-size: 14px;
+  color: #8f8f94;
+  text-align: center;
+  padding: 5px;
+}
+.boy ul li a p {
+  text-align: center;
+  line-height: 5px;
+}
+.boy ul li a p span:nth-child(1) {
+  color: red;
+}
+.boy ul li a p span:nth-child(2) {
+  text-decoration: line-through;
+}
+.boy ul li a button {
+  margin-bottom: 5px;
+}
