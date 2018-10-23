@@ -11,6 +11,28 @@
     <script src="assets/mui/js/mui.min.js"></script>
     <script src="assets/zepto/zepto.min.js"></script>
     <script src="js/category.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script type="text/template" id="tem">
+        {{each rows}}
+             <a href="javascript:;"
+                     data-id="{{$value.id}}"
+
+                     >{{$value.categoryName}}</a>
+        {{/each}}
+    </script>
+    <script type="text/template" id="temR">
+        {{each rows}}
+            <li>
+                <a href="javascript:;">
+                    <img src="{{$value.brandLogo}}" alt=""/>             <p>{{$value.brandName}}</p>
+                </a>
+            </li>
+        {{/each}}
+
+        <% if(!rows.length){ %>
+            <div >正在更新...</div>
+        <% } %>
+    </script>
 </head>
 <body>
 <header class="mui-bar mui-bar-nav my-header">
@@ -39,14 +61,23 @@
     <div class="my_left">
         <div class="mui-scroll-wrapper">
             <div class="mui-scroll">
-                1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>
+                <div class="links">
+
+                </div>
             </div>
         </div>
     </div>
     <div class="my_right">
         <div class="mui-scroll-wrapper">
             <div class="mui-scroll">
-                1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>
+                <ul class="ulImg">
+                    <!--<li>-->
+                        <!--<a href="javascript:;">-->
+                            <!--<img src="./images/brand1.png" alt=""/>             <p>耐克</p>-->
+                        <!--</a>-->
+                    <!--</li>-->
+
+                </ul>
             </div>
         </div>
     </div>
