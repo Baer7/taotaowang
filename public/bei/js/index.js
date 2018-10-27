@@ -1,3 +1,4 @@
+//导航变色
 window.onload = function () {
     var header = document.querySelector('.my-header');
     var banner = document.querySelector('.mui-slider');
@@ -15,11 +16,3 @@ window.onload = function () {
 }
 
 
-//底部跳转
-$(function () {
-    $('body').on('tap', 'a', function(){
-        mui.openWindow({
-            url: $(this).attr('href')
-        });
-    });
-})
