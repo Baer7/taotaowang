@@ -1,57 +1,58 @@
-//»ñÈ¡urlµÄÖµ
-function getURL(url, name){
-    var results = url.substr(url.indexOf('?')+1)
+//urlè·å–
+function getURL(url, name) {
+    var results = url.substr(url.indexOf('?') + 1)
     var result = results.split("&");
     for (var i = 0; i < result.length; i++) {
-        var res =result[i].split('=');
-        if(res[0]=name){
+        var res = result[i].split('=');
+        if (res[0] = name) {
             return res[1];
 
         }
     }
     return null;
 }
-var key = getURL(location.href,'key');
+var key = getURL(location.href, 'key');
 console.log(key);
 
 
-//Í¼Æ¬äÖÈ¾
-var html="";
-var page=1;
-var prices=1;
-var num=1;
-var This=null;
+
+var html = "";
+var page = 1;
+var prices = 1;
+var num = 1;
+var This = null;
+
 
 $(function () {
-    //ÉÏÀ­¼ÓÔØ
+    //ä¸Šæ‹‰æ’ä»¶
     mui.init({
-        pullRefresh : {
-            container:'#refreshContainer',//´ıË¢ĞÂÇøÓò±êÊ¶£¬querySelectorÄÜ¶¨Î»µÄcssÑ¡ÔñÆ÷¾ù¿É£¬±ÈÈç£ºid¡¢.classµÈ
-            up : {
-                height:50,//¿ÉÑ¡.Ä¬ÈÏ50.´¥·¢ÉÏÀ­¼ÓÔØÍÏ¶¯¾àÀë
-                auto:true,//¿ÉÑ¡,Ä¬ÈÏfalse.×Ô¶¯ÉÏÀ­¼ÓÔØÒ»´Î
-                contentrefresh : "ÕıÔÚ¼ÓÔØ...",//¿ÉÑ¡£¬ÕıÔÚ¼ÓÔØ×´Ì¬Ê±£¬ÉÏÀ­¼ÓÔØ¿Ø¼şÉÏÏÔÊ¾µÄ±êÌâÄÚÈİ
-                contentnomore:'Ã»ÓĞ¸ü¶àÊı¾İÁË',//¿ÉÑ¡£¬ÇëÇóÍê±ÏÈôÃ»ÓĞ¸ü¶àÊı¾İÊ±ÏÔÊ¾µÄÌáĞÑÄÚÈİ£»
-                callback :getData//±ØÑ¡£¬Ë¢ĞÂº¯Êı£¬¸ù¾İ¾ßÌåÒµÎñÀ´±àĞ´£¬±ÈÈçÍ¨¹ıajax´Ó·şÎñÆ÷»ñÈ¡ĞÂÊı¾İ£»
+        pullRefresh: {
+            container: '#refreshContainer',
+            up: {
+                height: 50,
+                auto: true,
+                contentrefresh: "æ­£åœ¨åŠ è½½...",
+                contentnomore: 'æ²¡æœ‰æ›´å¤šæ•°æ®äº†',
+                callback: getData
             }
         }
     });
 
-//ÅÅĞò
+//ä»·æ ¼
     $('#jiage').on('tap', function () {
         //alert(1)
-        prices = prices==1?2:1;
-        html="";
+        prices = prices == 1 ? 2 : 1;
+        html = "";
         page = 1;
         mui('#refreshContainer').pullRefresh().refresh(true);
         getData();
 
     })
-
+//é”€é‡
     $('#xiaoliang').on('tap', function () {
         //alert(1)
-        num = num==1?2:1;
-        html="";
+        num = num == 1 ? 2 : 1;
+        html = "";
         page = 1;
         mui('#refreshContainer').pullRefresh().refresh(true);
         getData();
@@ -60,28 +61,28 @@ $(function () {
 
 });
 
-
-function getData(){
-    if(!This){
-        This =this;
+//è°ƒç”¨ajax
+function getData() {
+    if (!This) {
+        This = this;
     }
 
     $.ajax({
-        url:'/product/queryProduct',
-        type:'get',
-        data:{
-            page:page++,
-            pageSize:3,
-            proName:key,
-            price:prices,
-            num:num
+        url: '/product/queryProduct',
+        type: 'get',
+        data: {
+            page: page++,
+            pageSize: 3,
+            proName: key,
+            price: prices,
+            num: num
         },
         success: function (res) {
-            html += template("tem",res);
-            $(".result-url").html(html) ;
-            This.endPullupToRefresh(res.data.length<=0);
+            html += template("tem", res);
+            $(".result-url").html(html);
+            This.endPullupToRefresh(res.data.length <= 0);
 
-            //ÉÏÀ­¼ÓÔØÍê±Ï(true±íÊ¾Ã»ÓĞ¸ü¶à)
+            //ä¸Šæ‹‰åˆ·æ–°(trueè¡¨ç¤ºæ²¡æœ‰æ›´å¤šæ•°æ®)
             //this.endPullupToRefresh(true|false);
         }
     })

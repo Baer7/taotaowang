@@ -13,7 +13,7 @@ $(function () {
     })
 
     //获取数据渲染到页面
-    var keyArr = [];
+        var keyArr = [];
     var locaVal =  localStorage.getItem("key");
     if(locaVal){
         keyArr = JSON.parse(locaVal);
