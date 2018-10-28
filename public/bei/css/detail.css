@@ -1,0 +1,89 @@
+.mui-content .box {
+  padding: 0 10px;
+}
+.mui-content .box .info {
+  margin: 10px 0;
+}
+.mui-content .box .price {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  line-height: 40px;
+  font-size: 14px;
+}
+.mui-content .box .price span:nth-child(1) {
+  font-size: 20px;
+  color: #ff3023;
+  margin: 0 10px;
+}
+.mui-content .box .price span:nth-child(2) {
+  text-decoration: line-through;
+  color: #ccc;
+}
+.mui-content .size {
+  margin: 10px 0;
+}
+.mui-content .size span {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 3px ;
+  margin-bottom: 10px;
+  width: 28px;
+  height: 28px;
+}
+.mui-content .num {
+  display: flex;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+.mui-content .num .num-z {
+  margin: 0 10px;
+  display: flex;
+}
+.mui-content .num .num-z span {
+  border: 1px solid #ccc;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  text-align: center;
+}
+.mui-content .num .num-z input {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+.mui-content .gouwu {
+  margin: 15px 0;
+  justify-content: center;
+  display: flex;
+}
+.mui-content .gouwu .ckShopping {
+  background: #fa672d;
+  text-align: center;
+  line-height: 35px;
+}
+.mui-content .gouwu .ckShopping a {
+  color: #fff;
+  font-size: 13px;
+  width: 150px;
+  height: 35px;
+  display: inline-block;
+}
+.mui-content .gouwu .addShopping {
+  background: #991020;
+  text-align: center;
+  line-height: 35px;
+}
+.mui-content .gouwu .addShopping a {
+  color: #fff;
+  font-size: 13px;
+  width: 150px;
+  height: 35px;
+  display: inline-block;
+}
+.active {
+  background-color: #ff5500;
+  color: #fff;
+}
