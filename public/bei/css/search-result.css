@@ -29,10 +29,13 @@
   color: #8f8f94;
   text-align: center;
   padding: 5px;
+  height: 65px;
+  overflow: hidden;
 }
 .add ul li a p {
   text-align: center;
-  line-height: 5px;
+  line-height: 15px;
+  height: 15px;
 }
 .add ul li a p span:nth-child(1) {
   color: red;
@@ -92,10 +95,13 @@
   color: #8f8f94;
   text-align: center;
   padding: 5px;
+  height: 65px;
+  overflow: hidden;
 }
 .mui-content .search-body ul li a p {
   text-align: center;
-  line-height: 5px;
+  line-height: 15px;
+  height: 15px;
 }
 .mui-content .search-body ul li a p span:nth-child(1) {
   color: red;

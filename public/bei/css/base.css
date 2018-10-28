@@ -3,6 +3,12 @@
   padding: 0;
   list-style: none;
 }
+body {
+  background-color: #fff;
+}
+body .mui-content {
+  background-color: #fff;
+}
 .mui-bar h1 {
   font-weight: 700;
 }

@@ -11,13 +11,30 @@
     <link rel="stylesheet" href="./css/search-result.css"/>
     <script src="assets/mui/js/mui.min.js"></script>
     <script src="./assets/zepto/zepto.min.js"></script>
-    <!--<script src="./js/index.js"></script>-->
-    <script src="./js/template-web.js"></script>
+    <script src="./js/gg.js"></script>    <script src="./js/template-web.js"></script>
+    <script src="./js/search-result.js"></script>
+    <script type="text/template" id="tem">
+      {{each data}}
+        <li>
+            <a href="javascript:;">
+                <img src="{{$value.pic[0].picAddr}}" alt=""/>
+                <span>{{$value.proName}}</span>
+
+                <p>
+                    <span>¥{{$value.price}}</span>
+                    <span>¥{{$value.oldPrice}}</span>
+                </p>
+                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+            </a>
+        </li>
+        {{/each}}
+    </script>
 </head>
 <body>
 <header class="mui-bar mui-bar-nav my-header">
+    <a href="javascript:;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
     <h1 class="mui-title">淘淘网</h1>
-    <a class="mui-icon mui-icon-search mui-pull-right"></a>
+
 </header>
 <nav class="mui-bar mui-bar-tab my-footer">
     <a class="mui-tab-item mui-active" href="index.html">
@@ -37,69 +54,28 @@
         <span class="mui-tab-label">会员中心</span>
     </a>
 </nav>
-<div class="mui-content">
-    <!--上面-->
-    <div class="mui-content1">
-        <div class="mui-row">
-            <div class="mui-col-xs-6">
-                价格
-                <span class="mui-icon mui-icon-arrowdown"></span>
-            </div>
-            <div class="mui-col-xs-6">
-                销量
-                <span class="mui-icon mui-icon-arrowdown"></span>
-            </div>
-        </div>
-    </div>
-    <!--内容-->
-    <div class="search-body">
-        <ul>
-            <li>
-                <a href="javascript:;">
-                    <img src="images/product.jpg" alt=""/>           <span>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
+<div class="mui-content" id="refreshContainer">
+   <div class="mui-Content">
+       <!--上面-->
+       <div class="mui-content1">
+           <div class="mui-row">
+               <div class="mui-col-xs-6" id="jiage">
+                   价格
+                   <span class="mui-icon mui-icon-arrowdown"></span>
+               </div>
+               <div class="mui-col-xs-6" id="xiaoliang">
+                   销量
+                   <span class="mui-icon mui-icon-arrowdown"></span>
+               </div>
+           </div>
+       </div>
+       <!--内容-->
+       <div  class="search-body">
+           <ul class="result-url">
 
-                    <p>
-                        <span>¥560</span>
-                        <span>¥888</span>
-                    </p>
-                    <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <img src="images/product.jpg" alt=""/>           <span>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
-
-                    <p>
-                        <span>¥560</span>
-                        <span>¥888</span>
-                    </p>
-                    <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <img src="images/product.jpg" alt=""/>           <span>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
-
-                    <p>
-                        <span>¥560</span>
-                        <span>¥888</span>
-                    </p>
-                    <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <img src="images/product.jpg" alt=""/>           <span>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
-
-                    <p>
-                        <span>¥560</span>
-                        <span>¥888</span>
-                    </p>
-                    <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
-                </a>
-            </li>
-        </ul>
-    </div>
+           </ul>
+       </div>
+   </div>
 </div>
 <script>
 

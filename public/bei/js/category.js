@@ -4,12 +4,6 @@ $(function () {
         //scrollX: false, //是否横向滚动
     });
 
-//底部跳转
-    $('body').on('tap', 'a', function(){
-        mui.openWindow({
-            url: $(this).attr('href')
-        });
-    });
 
     //一级分类
     $.ajax({
